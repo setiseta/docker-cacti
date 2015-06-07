@@ -1,5 +1,7 @@
 # Cacti Docker
 
+Cacti Container to use with external mysql, supported is samersbn/mysql or mysql
+
 ---
 Usage example
 ===
@@ -28,7 +30,6 @@ docker run -d \
 	-v $DIR/data:/data \
 	-p 80:80 \
 	--link $NAME-db:mysql \
-	-e POLLER=24 \
 	--name $NAME \
 	seti/cacti
 ```
