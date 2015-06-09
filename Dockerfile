@@ -33,6 +33,7 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends && \
     echo /var/lock/apache2 > /etc/container_environment/APACHE_LOCK_DIR && \
     echo /var/run/apache2.pid > /etc/container_environment/APACHE_PID_FILE && \
     echo /var/run/apache2 > /etc/container_environment/APACHE_RUN_DIR && \
+	ln -s /usr/sbin/spine /usr/bin/spine && \
     chmod +x /etc/service/snmpd/run \
         /etc/service/apache2/run \
         /etc/my_init.d/init.sh
