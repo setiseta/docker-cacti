@@ -77,6 +77,8 @@ sed -i -e 's/DB_Pass.*/DB_Pass\t\t'$DB_PASS'/g' /etc/cacti/spine.conf
 sed -i -e 's/\/\/$url_path = "\/cacti\/";/$url_path = "\/";/g' /etc/cacti/debian.php
 sed -i -e "s/\$config\[\"rra_path\"\] = '.*';/\$config\[\"rra_path\"\] = '\/data\/rra';/g" /usr/share/cacti/site/include/global.php
 
+sed -i 's/memory_limit = 128/memory_limit = 512/g' /etc/php5/*/php.ini
+
 prog="mysqladmin -h ${DB_HOST} -P ${DB_PORT} -u ${DB_USER} ${DB_PASS:+-p$DB_PASS} status"
 timeout=60
 printf "Waiting for database server to accept connections"
