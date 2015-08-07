@@ -2,16 +2,18 @@
 
 Cacti Container to use with external mysql, supported is samersbn/mysql or mysql
 
+TODO: plugin / extension support / adding etc.
+
 ---
 Usage example
 ===
-###Needed directories on host:
+### Needed directories on host:
 - data
 - mysql
 
 ### with sameersbn/mysql as database
 
-```
+```bash
 NAME="cacti"
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 docker run -d -m 1g \
@@ -23,7 +25,7 @@ docker run -d -m 1g \
 	sameersbn/mysql:latest
 ```
 
-```
+```bash
 NAME="cacti"
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 docker run -d \
