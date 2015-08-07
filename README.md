@@ -24,7 +24,7 @@ docker run -d -m 1g \
 	--name $NAME-db \
 	sameersbn/mysql:latest
 ```
-
+---
 ```bash
 NAME="cacti"
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
